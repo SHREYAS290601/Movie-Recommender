@@ -1,0 +1,11 @@
+/.ipynb_checkpoints
+/movies-recommender-system/.idea
+/movies-recommender-system/venv/etc
+/movies-recommender-system/venv/Lib
+/movies-recommender-system/venv/Scripts
+/movies-recommender-system/venv/share
+/movies-recommender-system/venv/pyvenv.cfg
+/Similarity.pkl
+/Movie_recommender.pkl
+/movies-recommender-system/Similarity.pkl
+/movies-recommender-system/Movie_recommender.pkl
