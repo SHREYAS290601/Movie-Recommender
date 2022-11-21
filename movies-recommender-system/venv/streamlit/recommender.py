@@ -2,6 +2,7 @@ import streamlit as st
 import pickle
 import pandas
 import requests
+from api_key import key
 st.set_page_config(layout='wide')
 st.markdown(
     """
@@ -81,7 +82,7 @@ def recommender(movie_name):
 
 def fetch_data_poster(movie_id):
     response = requests.get(
-        'https://api.themoviedb.org/3/movie/{}?api_key=9110ddd83e83e5a0e4d19ca3e2db5247&language=en-US'.format(
+        'https://api.themoviedb.org/3/movie/{}?api_key='+key+'&language=en-US'.format(
             movie_id))
     data = response.json()
 
@@ -91,7 +92,7 @@ def fetch_data_poster(movie_id):
 
 def fetch_data_describe(movie_id):
     response = requests.get(
-        'https://api.themoviedb.org/3/movie/{}?api_key=9110ddd83e83e5a0e4d19ca3e2db5247&language=en-US'.format(
+        'https://api.themoviedb.org/3/movie/{}?api_key='+key+'&language=en-US'.format(
             movie_id))
     data = response.json()
     describe =  data['overview']
@@ -99,7 +100,7 @@ def fetch_data_describe(movie_id):
     
 def fetch_data_genre(movie_id):
     response = requests.get(
-        'https://api.themoviedb.org/3/movie/{}?api_key=9110ddd83e83e5a0e4d19ca3e2db5247&language=en-US'.format(
+        'https://api.themoviedb.org/3/movie/{}?api_key=9'+key+'&language=en-US'.format(
             movie_id))
     data = response.json()
     genres = data['genres']
