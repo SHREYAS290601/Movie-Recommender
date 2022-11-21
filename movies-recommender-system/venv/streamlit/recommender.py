@@ -124,7 +124,7 @@ if st.sidebar.button('Recommend'):
         else:
             col2.write(recommendations[i])
             col2.image(posters[i])
-            col2.write('**{}**'.format(describe[i])[:300])
+            col2.write('{}'.format(describe[i])[:300])
             col2.write("Genre:{}".format(genres[i][0]['name']))
 
     
